@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors, Go!</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <div class="container center" id="titleMenu">
+        <h1 class="text-center col-12 my-5">Rock, Paper, Scissors, <span id="start">Go!</span>
+        </h1>
+    </div>
+    <div class="container center hide" id="gameMenu">
+        <div class="container d-flex justify-content-center mt-3 scoreboard">
+            <h3 class="col-4 text-center">WINS</h3>
+            <h3 class="col-4 text-center">TIES</h3>
+            <h3 class="col-4 text-center">LOSSES</h3>
+        </div>
+        <div class="container d-flex justify-content-center scoreboard">
+            <h2 class="col-4 text-center" id="playerScore">0</h2>
+            <h2 class="col-4 text-center" id="tiedScore">0</h2>
+            <h2 class="col-4 text-center" id="botScore">0</h2>
+        </div>
+        <div class="container d-flex hide justify-content-center" id="playMenu">
+            <button class="btn col-3 playButton" id="playRock"><img src="images/rock.png" alt="Rock"
+                    class="playButtonImg"></button>
+            <button class="btn col-3 playButton" id="playPaper"><img src="images/paper.png" alt="Paper"
+                    class="playButtonImg"></button>
+            <button class="btn col-3 playButton" id="playScissors"><img src="images/scissors.png" alt="Scissors"
+                    class="playButtonImg"></button>
+        </div>
+    </div>
+    <div class="container-fluid center d-flex justify-content-around hide" id="handsPreview">
+        <img src="images/rock.png" alt="Hand" id="playerHand">
+        <img src="images/rock.png" alt="Hand" id="botHand">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+body {
+    background-color: #f1faee;
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 5em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+img {
+    filter: invert(11%) sepia(12%) saturate(647%) hue-rotate(169deg) brightness(96%) contrast(91%);
+}
+
+.btn {
+    box-shadow: none !important;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s opacity;
+}
+
+.hide {
+    opacity: 0;
+}
+
+/* .playButtonImg {
+    width: 300px;
+} */
+  
+.playButtonImg {
+    width: 50%;
+}
+
+@media screen and (min-width: 1400px) {
+    .playButtonImg {
+      width: 300px;
+    }
+}
+
+.scoreboard {
+    transition: 1s opacity;
+}
+
+#titleMenu {
+    z-index: 3;
+}
+
+#gameMenu {
+    z-index: 2;
+    height: 100vh;
+}
+
+#handsPreview {
+    z-index: 1;
+    transition: 1s opacity;
+}
+
+#playMenu {
+    position: absolute;
+    bottom: -100%;
+    transition: 1s bottom;
+}
+
+#playRock, #playPaper, #playScissors {
+    transition: 0.5s opacity;
+}
+
+#playRock {
+    animation: hand-rock 5s ease-in-out infinite;
+}
+
+#playPaper{
+    animation: hand-paper 5s ease-in-out infinite;
+}
+
+#playScissors {
+    animation: hand-scissors 5s ease-in-out infinite;
+}
+
+#playRock img {
+    transform: rotate(-30deg) translate(30px);
+}
+
+#playPaper img {
+    transform: translate(-5px, 0);
+}
+
+#playScissors img {
+    transform: rotate(30deg) translate(-30px);
+}
+
+#start {
+    color: #e63946;
+}
+
+#start:hover {
+    cursor: pointer;
+}
+
+#playerHand, #botHand {
+    width: auto;
+    height: 60vw;
+    position: relative;
+}
+
+#playerHand {
+    transform: rotate(90deg) scale(-1, 1) translate(-10vw, -100vh);
+    left: -100%;
+    transition: 1s left;
+}
+
+#botHand {
+    transform: rotate(-90deg) translate(-10vw, -100vh);
+    right: -100%;
+    transition: 1s right;
+}
+
+@keyframes hand-rock {
+    0% {transform: translate(0, 0);}
+    50% {transform: translate(15px, 60px);}
+    100% {transform: translate(0, 0);}
+}
+
+@keyframes hand-paper {
+    0% {transform: translate(0, 0);}
+    50% {transform: translate(0, 60px);}
+    100% {transform: translate(0, 0);}
+}
+
+@keyframes hand-scissors {
+    0% {transform: translate(0, 0);}
+    50% {transform: translate(-15px, 60px);}
+    100% {transform: translate(0, 0);}
+}
+
+@keyframes hand-player-start {
+    0% {transform: rotate(90deg) scale(-1, 1) translate(-10vw, -100vh);}
+    10% {transform: rotate(60deg) scale(-1, 1) translate(-10vw, -100vh);}
+    20% {transform: rotate(90deg) scale(-1, 1) translate(-10vw, -100vh);}
+    30% {transform: rotate(60deg) scale(-1, 1) translate(-10vw, -100vh);}
+    40% {transform: rotate(90deg) scale(-1, 1) translate(-10vw, -100vh);}
+    60% {transform: rotate(0deg) scale(-1, 1) translate(-10vw, -100vh);}
+    100% {transform: rotate(0deg) scale(-1, 1) translate(-10vw, -100vh);}
+}
+
+@keyframes hand-bot-start {
+    0% {transform: rotate(-90deg) translate(-10vw, -100vh);}
+    10% {transform: rotate(-60deg) translate(-10vw, -100vh);}
+    20% {transform: rotate(-90deg) translate(-10vw, -100vh);}
+    30% {transform: rotate(-60deg) translate(-10vw, -100vh);}
+    40% {transform: rotate(-90deg) translate(-10vw, -100vh);}
+    60% {transform: rotate(0deg) translate(-10vw, -100vh);}
+    100% {transform: rotate(0deg) translate(-10vw, -100vh);}
+}
+
+@keyframes hand-player-result {
+    from {transform: rotate(0deg) scale(-1, 1) translate(-10vw, -100vh);}
+    to {transform: rotate(90deg) scale(-1, 1) translate(-10vw, -100vh);}
+}
+
+@keyframes hand-bot-result {
+    from {transform: rotate(0deg) translate(-10vw, -100vh);}
+    to {transform: rotate(-90deg) translate(-10vw, -100vh);}
+}
